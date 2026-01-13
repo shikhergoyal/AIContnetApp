@@ -30,6 +30,18 @@ streamlit run streamlit_app.py
 - OpenAI fallback: Provide `OPENAI_API_KEY` in the sidebar or via `st.secrets`.
 - For Streamlit Community Cloud, add your secrets in the app settings.
 
+### Deploying to Streamlit Community Cloud (recommended)
+
+1. Go to https://share.streamlit.io and sign in with your GitHub account.
+2. Click **"New app"** -> choose this repository (`shikhergoyal/AIContnetApp`) and the `main` branch, and set the main file to `streamlit_app.py`.
+3. Under **Advanced**, add the following environment secrets (do NOT commit them to the repo):
+   - `GOOGLE_API_KEY` (optional, for Gemini)
+   - `OPENAI_API_KEY` (optional, fallback)
+4. Click **Deploy**. Streamlit will install `requirements.txt` and run the app.
+
+Notes:
+- If a site blocks scraping, use the manual content editor in the app.
+- If you want me to complete the deployment for you, provide a Streamlit Community Cloud API token and I can create the app automatically using a workflow (or I can guide you step-by-step).
 ## Notes
 
 - The app attempts to fetch pages directly; if a site blocks scraping, it will try a set of public proxy endpoints. You can also paste manual content.
