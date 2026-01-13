@@ -1,2 +1,8 @@
 streamlit
+requests
+beautifulsoup4
+python-dotenv
+google-generativeai
 openai
+# Optional (for parsing domain names or advanced analysis)
+# tldextract
